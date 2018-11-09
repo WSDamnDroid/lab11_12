@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">lab11</string>
+    <string name="btnChBck">Выберите цвет фона</string>
+    <string-array name="colorsStr">
+        <item>Красный</item>
+        <item>Синий</item>
+        <item>Зелёный</item>
+        <item>Жёлтый</item>
+        <item>Белый</item>
+        <item>Фиолетовый</item>
+        <item>Чёрный</item>
+        <item>Малиновый</item>
+        <item>Бирюзовый</item>
+    </string-array>
+    <string name="btnBack">Назад</string>
+    <string name="userPreference">chosenColor</string>
+    <string name="colorIntVal">colorValue</string>
+</resources>
