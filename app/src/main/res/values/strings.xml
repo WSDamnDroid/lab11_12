@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">lab11</string>
     <string name="btnChBck">Выберите цвет фона</string>
+    <string name="btnToThird">На 3-ю активность</string>
     <string-array name="colorsStr">
         <item>Красный</item>
         <item>Синий</item>
@@ -15,4 +16,5 @@
     <string name="btnBack">Назад</string>
     <string name="userPreference">chosenColor</string>
     <string name="colorIntVal">colorValue</string>
+    <string name="trdActText">ЭТО ТРЕТЬЯ АКТИВНОСТЬ, АГА</string>
 </resources>

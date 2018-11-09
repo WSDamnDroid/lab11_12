@@ -1,20 +1,17 @@
-package artn.lab11;
+package artn.lab11.activities;
 
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
-import java.util.List;
+import artn.lab11.adapters.ColorAdapter;
+import artn.lab11.R;
 
-public class Second extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class Second extends MyBaseActivity implements AdapterView.OnItemClickListener {
     private ColorAdapter adapter;
     private ListView lv;
 
@@ -29,16 +26,12 @@ public class Second extends AppCompatActivity implements AdapterView.OnItemClick
 
     }
 
-    public void Bck(View view) {
-        onBackPressed();
-    }
-
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        SharedPreferences.Editor editor = getSharedPreferences(getString(R.string.userPreference), MODE_PRIVATE).edit();
-        getWindow().getDecorView().setBackgroundColor((int)adapter.getItem(position));
-        editor.putInt(getString(R.string.colorIntVal), (int)adapter.getItem(position));
+        SharedPreferences.Editor editor = preferences.edit();
+        getWindow().getDecorView().setBackgroundColor((int) adapter.getItem(position));
+        editor.putInt(getString(R.string.colorIntVal), (int) adapter.getItem(position));
         editor.commit();
     }
 }

@@ -1,20 +1,23 @@
-package artn.lab11;
+package artn.lab11.activities;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class Main extends AppCompatActivity {
+import artn.lab11.R;
+
+public class MyBaseActivity extends AppCompatActivity {
     protected SharedPreferences preferences;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_act);
         preferences = getSharedPreferences(getString(R.string.userPreference), MODE_PRIVATE);
+        String intElKey = getString(R.string.colorIntVal);
+        Integer colorEl = preferences.getInt(intElKey, -1);
+        getWindow().getDecorView().setBackgroundColor(colorEl);
     }
 
     @Override
@@ -25,9 +28,7 @@ public class Main extends AppCompatActivity {
         getWindow().getDecorView().setBackgroundColor(colorEl);
     }
 
-    public void toSec(View view)
-    {
-        Intent intent = new Intent(this, Second.class);
-        startActivity(intent);
+    public void Bck(View view) {
+        onBackPressed();
     }
 }

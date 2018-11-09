@@ -1,4 +1,4 @@
-package artn.lab11;
+package artn.lab11.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,12 +10,14 @@ import android.widget.TextView;
 
 import java.sql.Struct;
 
+import artn.lab11.R;
+
 public class ColorAdapter extends BaseAdapter {
 
     private String[] names;
     private int[] colors;
 
-    ColorAdapter(String[] Names, int[] Colors) {
+    public ColorAdapter(String[] Names, int[] Colors) {
         names = Names;
         colors = Colors;
     }
